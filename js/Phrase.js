@@ -3,7 +3,7 @@
  * Phrase.js */
  class Phrase {
      constructor(phrase){
-         this._phrase = phrase;
+         this.phrase = phrase.toLowerCase();
      }
 
      addPhraseToDisplay(){
@@ -13,6 +13,6 @@
      checkLetter(){}
 
      showMatchedLetter(){
-         
+
      }
  }
