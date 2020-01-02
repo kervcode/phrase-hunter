@@ -7,7 +7,13 @@ class Phrase {
     }
 
     addPhraseToDisplay() {
+        //str.match(/[a-z]/i
+        let _phrase = this.phrase;
+        for (let i = 0; i < _phrase.length; i++) {
+            if (_phrase.match(/[a-z]/i)) {
 
+            }
+        }
     }
 
     checkLetter() {}
