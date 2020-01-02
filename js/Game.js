@@ -26,7 +26,7 @@ class Game {
     }
 
     startGame() {
-        this.activePhrase = getRandomPhrase();
+        this.activePhrase = this.getRandomPhrase();
     }
     getRandomPhrase() {
         let randomPhrase = Math.floor(Math.random() * this.phrases.length);

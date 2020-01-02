@@ -8,11 +8,18 @@ class Phrase {
 
     addPhraseToDisplay() {
         //str.match(/[a-z]/i
-        let _phrase = this.phrase;
-        for (let i = 0; i < _phrase.length; i++) {
-            if (_phrase.match(/[a-z]/i)) {
-
+        let li = document.createElement('LI'),
+            phraseUl = document.getElementsByTagName('ul');
+        for (let i = 0; i < phrase.length; i++) {
+            if (phrase[i].match(/[a-z]/i)) {
+                li.innerHTML(phrase[i]);
+                li.classList.add('letter', 'hide')
             }
+            if (phrase[i] === '') {
+                li.innerHTML(phrase[i]);
+                li.classList.add('space')
+            }
+            phraseUl.appendChild(li)
         }
     }
 
