@@ -22,12 +22,15 @@ class Game {
                 }
             ],
             //need to add 5 phrases inside this array
-            this.activePhrase = null;
+            this.activePhrase = null
     }
 
     startGame() {
         this.activePhrase = getRandomPhrase();
     }
-
+    getRandomPhrase() {
+        let randomPhrase = Math.floor(Math.random() * this.phrases.length);
+        return this.phrases[randomPhrase].phrase;
+    }
 
 }
