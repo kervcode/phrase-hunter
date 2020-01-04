@@ -26,4 +26,6 @@
 
 
 const game = new Game();
-game.getRandomPhrase().addPhraseToDisplay();
+const randomPhrase = game.getRandomPhrase();
+const phrase = new Phrase(randomPhrase.phrase);
+phrase.addPhraseToDisplay();
