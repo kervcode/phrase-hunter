@@ -27,10 +27,14 @@ class Game {
     }
 
     startGame() {
-        this.activePhrase = this.getRandomPhrase();
+        document.addEventListener('click', () =>{
+            alert('clicked');
+            const overlay = document.getElementById('overlay');
+            overlay.classList.add('hide');
+            this.activePhrase = this.getRandomPhrase();
+        });
     }
     getRandomPhrase() {
-        
         let randomPhrase = Math.floor(Math.random() * this.phrases.length);
         return this.phrases[randomPhrase];
     }
