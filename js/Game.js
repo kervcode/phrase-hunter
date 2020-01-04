@@ -26,7 +26,7 @@ class Game {
             alert('clicked');
             const overlay = document.getElementById('overlay');
             overlay.classList.remove('start');
-            this.getRandomPhrase();
+            // this.getRandomPhrase();
             phrase.addPhraseToDisplay();
             this.activePhrase = this.getRandomPhrase();
         });
