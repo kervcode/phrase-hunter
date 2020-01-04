@@ -15,14 +15,14 @@
 // STEP 5 TESTS WORKED
 // const game = new Game();
 // const logPhrase = (phrase) => {
-//     console.log(`Phrase - phrase: `, phrase.phrase);
-//     };
-    
-//     logPhrase(game.getRandomPhrase());
-//     logPhrase(game.getRandomPhrase());
-//     logPhrase(game.getRandomPhrase());
-//     logPhrase(game.getRandomPhrase());
-//     logPhrase(game.getRandomPhrase());
+//   console.log(`Phrase - phrase: `, phrase.phrase);
+// };
+
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
 
 //STEP 6 TEST WORKED
 // const game = new Game();
@@ -32,4 +32,7 @@
 
 const game = new Game();
 game.startGame();
-// console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+const phrase = new Phrase(game.getRandomPhrase());
+
+
+console.log(`Active Phrase - phrase: ${this.activePhrase.addPhraseToDisplay()}`);
