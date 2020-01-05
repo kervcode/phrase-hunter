@@ -40,4 +40,10 @@ class Game {
         // this.activePhrase = this.selectPhrase.Phrase;
     }
 
+    /* This method control the user interaction with the game
+     */
+    handleInteraction() {
+
+    }
+
 }
