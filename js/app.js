@@ -2,6 +2,18 @@
  * Project 4 - OOP Game App
  * app.js */
 
+
+/*
+ * Game Started
+ */
+
+let game;
+
+document.getElementById('btn__reset').addEventListener('click', () => {
+  game = new Game();
+  game.startGame();
+})
+
 //STEP 3 TESTS WORKED
 // const phrase = new Phrase('Life is like a box of chocolates');
 // console.log(`Phrase - phrase: ${phrase.phrase}`);
@@ -25,13 +37,14 @@
 // logPhrase(game.getRandomPhrase());
 
 //STEP 6 TEST WORKED
-const game = new Game();
-const randomPhrase = game.getRandomPhrase();
-const phrase = new Phrase(randomPhrase.phrase);
-phrase.addPhraseToDisplay();
+// const game = new Game();
+// const randomPhrase = game.getRandomPhrase();
+// const phrase = new Phrase(randomPhrase.phrase);
+// phrase.addPhraseToDisplay();
 
 
 //STEP 7 TESTS
 // const game = new Game();
 // game.startGame();
+
 // console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);

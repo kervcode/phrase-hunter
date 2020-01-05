@@ -21,15 +21,23 @@ class Game {
         let randomPhrase = Math.floor(Math.random() * this.phrases.length);
         return this.phrases[randomPhrase];
     }
+
+    /*
+     *
+     */
     startGame() {
-        document.addEventListener('click', () => {
-            alert('clicked');
-            const overlay = document.getElementById('overlay');
-            overlay.classList.remove('start');
-            // this.getRandomPhrase();
-            phrase.addPhraseToDisplay();
-            this.activePhrase = this.getRandomPhrase();
-        });
+        //hide the start screen overlay
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+
+        //call the the getRandomPhrase
+        let select = this.getRandomPhrase();
+        this.activePhrase = select;
+        select.addPhraseToDisplay();
+
+        //selected phrase
+        console.log(this.activePhrase)
+        // this.activePhrase = this.selectPhrase.Phrase;
     }
 
 }
