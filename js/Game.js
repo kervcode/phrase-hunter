@@ -42,12 +42,10 @@ class Game {
     /* This method control the user interaction with the game
      */
     handleInteraction() {
-        let buttons = document.querySelectorAll('.key');
-        //check if button is clicked
-        buttons.forEach(button => {
-            if (button.innerText === )
-        })
-
+        
+        this.checkLetter(this.activePhrase.phrase);
+        this.showMatchedLetter();
+        
         //check if button match letter on the screen
 
         //if not matched, disable select letter - add selected letter
@@ -56,4 +54,26 @@ class Game {
 
     }
 
+
+    /**
+    * Checks if passed letter is in phrase
+    * @param (string) letter - Letter to check
+    */
+    checkLetter(letter){
+        let keyboard = document.getElementById('qwerty');
+        // let activePhrase = this.activePhrase.phrase;
+        let letterCheck;
+        //check if button is clicked
+        keyboard.addEventListener('click', (e) =>{
+            let keyPush = e.target;
+            if (letter.includes(keyPush.innerText)){
+                letterCheck = keyPush.innerText;
+                console.log(letterCheck)
+                return letterCheck;
+            }
+        });
+        // this.showMatchedLetter();
+      
+        // return letterCheck;
+    }
 }

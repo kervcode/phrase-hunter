@@ -27,9 +27,7 @@ class Phrase {
     }
 
     checkLetter() {
-        console.log(Phrase.addPhraseToDisplay())
-        let letter = this.phrase;
-
+        
 
     }
 
