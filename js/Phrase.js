@@ -27,6 +27,8 @@ class Phrase {
     }
 
     checkLetter() {
+        let letter = this.phrase;
+
 
     }
 
