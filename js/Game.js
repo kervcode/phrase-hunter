@@ -36,8 +36,7 @@ class Game {
         select.addPhraseToDisplay();
 
         //selected phrase
-        console.log(this.activePhrase)
-        // this.activePhrase = this.selectPhrase.Phrase;
+        console.log(this.activePhrase);
     }
 
     /* This method control the user interaction with the game

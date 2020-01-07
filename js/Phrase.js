@@ -27,7 +27,7 @@ class Phrase {
     }
 
     checkLetter() {
-
+        console.log(Phrase.addPhraseToDisplay())
     }
 
     showMatchedLetter() {
