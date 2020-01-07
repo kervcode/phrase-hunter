@@ -42,6 +42,17 @@ class Game {
     /* This method control the user interaction with the game
      */
     handleInteraction() {
+        let buttons = document.querySelectorAll('.key');
+        //check if button is clicked
+        buttons.forEach(button => {
+            if (button.innerText === )
+        })
+
+        //check if button match letter on the screen
+
+        //if not matched, disable select letter - add selected letter
+
+        // if matched, 
 
     }
 
