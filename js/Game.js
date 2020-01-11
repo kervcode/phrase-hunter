@@ -39,41 +39,20 @@ class Game {
         console.log(this.activePhrase);
     }
 
-    /* This method control the user interaction with the game
-     */
-    handleInteraction() {
-        
-        this.checkLetter(this.activePhrase.phrase);
-        this.showMatchedLetter();
-        
-        //check if button match letter on the screen
+    checkForWin() {
+        let list = document.querySelectorAll('.letter');
+        console.log(list)
+        const alltrue = [];
 
-        //if not matched, disable select letter - add selected letter
-
-        // if matched, 
-
-    }
-
-
-    /**
-    * Checks if passed letter is in phrase
-    * @param (string) letter - Letter to check
-    */
-    checkLetter(letter){
-        let keyboard = document.getElementById('qwerty');
-        // let activePhrase = this.activePhrase.phrase;
-        let letterCheck;
-        //check if button is clicked
-        keyboard.addEventListener('click', (e) =>{
-            let keyPush = e.target;
-            if (letter.includes(keyPush.innerText)){
-                letterCheck = keyPush.innerText;
-                console.log(letterCheck)
-                return letterCheck;
+        list.forEach(li => {
+            if (li.classList.contains('show')) {
+                alltrue.push(li);
             }
-        });
-        // this.showMatchedLetter();
-      
-        // return letterCheck;
+        })
+        if (alltrue.length === list.length) {
+            console.log('win')
+        }
     }
+
+
 }
