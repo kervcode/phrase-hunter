@@ -12,7 +12,8 @@ let game;
 document.getElementById('btn__reset').addEventListener('click', () => {
   game = new Game();
   game.startGame();
-  game.handleInteraction();
+  // game.checkForWin();
+  // game.handleInteraction();
 })
 
 //STEP 3 TESTS WORKED
