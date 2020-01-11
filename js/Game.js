@@ -39,9 +39,12 @@ class Game {
         console.log(this.activePhrase);
     }
 
+    /**
+     * check if there's a win
+     * @return {boolean} True if game has been won, false if game wasn't won
+     */
     checkForWin() {
-        let list = document.querySelectorAll('.letter');
-        console.log(list)
+        const list = document.querySelectorAll('.letter');
         const alltrue = [];
 
         list.forEach(li => {
@@ -51,7 +54,31 @@ class Game {
         })
         if (alltrue.length === list.length) {
             console.log('win')
+            return true;
+        } else {
+            console.log(false)
+            return false;
         }
+    }
+
+    removeLife() {
+        const lifes = document.querySelectorAll('.tries');
+        let index = this.missed;
+        console.log(lifes)
+
+        lifes.forEach((life, index) => {
+            console.log(life[index])
+        });
+
+        index += 1;
+        // let missedLife = lifes.pop();
+        // missedLife.style.display = 'none';
+        // console.log(this.missed)
+        // console.log(missedLife)
+    }
+
+    gameOver() {
+
     }
 
 
