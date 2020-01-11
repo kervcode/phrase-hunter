@@ -26,12 +26,41 @@ class Phrase {
         }
     }
 
-    checkLetter() {
-        
+    /**
+     * Checks if passed letter is in phrase
+     * @param (string) letter - Letter to check
+     */
+    checkLetter(letter) {
+        let keyboard = document.getElementById('qwerty');
+        //check if button is clicked
+        if (this.phrase.includes(letter)) {
+            // console.log(true)
+            this.showMatchedLetter(letter)
+        } else {
+            console.log(false)
+        }
+        // keyboard.addEventListener('click', (e) => {
+        //     let keyPush = e.target;
+        //     if (letter === keyPush.innerText) {
+        //         console.log(letter)
+        //     }
+        //     // else return false;
+        // });
+        // this.showMatchedLetter();
 
+        // return letterCheck;
     }
 
-    showMatchedLetter() {
+    showMatchedLetter(letter) {
+        const list = document.querySelectorAll('li');
+        // console.log(list)
+        for (let li of list) {
+            if (letter === li.innerText) {
+                // console.log('true')
+                li.classList.add('show');
+                li.classList.remove('hide')
+            }
+        }
 
     }
 }
