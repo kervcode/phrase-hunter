@@ -5,7 +5,9 @@ class Phrase {
     constructor(phrase) {
         this.phrase = phrase.toLowerCase();
     }
-
+    /**
+     * Display phrase on game board
+     */
     addPhraseToDisplay() {
         //str.match(/[a-z]/i
         let ul = document.querySelector('UL'),
