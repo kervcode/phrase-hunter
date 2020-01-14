@@ -9,7 +9,7 @@ class Game {
       new Phrase("I am on a seafood diet I see food and I eat it"),
       new Phrase("A balanced diet means a cupcake in each hand"),
       new Phrase("I love you"),
-      new Phrase("Fish and visitors stink after three days"),
+      new Phrase("You cannot win this"),
       new Phrase("Humpty Dumpty was pushed")
     ];
 
