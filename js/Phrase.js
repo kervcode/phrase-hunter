@@ -36,10 +36,11 @@ class Phrase {
         let keyboard = document.getElementById('qwerty');
         //check if button is clicked
         if (this.phrase.includes(letter)) {
+            return true;
             // console.log(true)
-            this.showMatchedLetter(letter)
+            // this.showMatchedLetter(letter)
         } else {
-            console.log(false)
+            return false;
         }
         // keyboard.addEventListener('click', (e) => {
         //     let keyPush = e.target;
