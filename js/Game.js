@@ -29,6 +29,8 @@ class Game {
    * Begins game by selecting a random phrase and displaying it to user
    */
   startGame() {
+    //clear ul before game start
+    this.reset()
     //hide the start screen overlay
     const overlay = document.getElementById("overlay");
     overlay.style.visibility = "hidden";
@@ -134,6 +136,36 @@ class Game {
     } else {
       gameStatus.innerText = 'Sorry, Wishing you better luck next time !!!'
     }
+
+  }
+
+  /**
+   * reset game elements before initiate new game
+   */
+  reset() {
+    //remove all li elements in the UL
+    document.querySelector('UL').innerHTML = '';
+    //reset button element
+    const keys = document.querySelectorAll('.key');
+
+    /**
+     * remove disable attribute from onscreen button
+     * removed chosen and wrong class
+     */
+    keys.forEach(key => {
+      key.removeAttribute("disabled");
+      key.classList.remove('wrong');
+      key.classList.remove('chosen')
+    });
+
+    /**
+     * reset all life heart images
+     */
+    const hearts = document.querySelectorAll('#scoreboard img');
+
+    hearts.forEach(heart => {
+      heart.setAttribute('src', '../images/liveHeart.png')
+    })
 
   }
 }

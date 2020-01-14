@@ -42,16 +42,6 @@ class Phrase {
         } else {
             return false;
         }
-        // keyboard.addEventListener('click', (e) => {
-        //     let keyPush = e.target;
-        //     if (letter === keyPush.innerText) {
-        //         console.log(letter)
-        //     }
-        //     // else return false;
-        // });
-        // this.showMatchedLetter();
-
-        // return letterCheck;
     }
 
     showMatchedLetter(letter) {
@@ -64,6 +54,5 @@ class Phrase {
                 li.classList.remove('hide')
             }
         }
-
     }
 }
