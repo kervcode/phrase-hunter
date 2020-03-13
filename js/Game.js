@@ -164,7 +164,7 @@ class Game {
     const hearts = document.querySelectorAll('#scoreboard img');
 
     hearts.forEach(heart => {
-      heart.setAttribute('src', '../images/liveHeart.png')
+      heart.setAttribute('src', 'images/liveHeart.png')
     })
 
   }
